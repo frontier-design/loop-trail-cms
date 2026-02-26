@@ -7,7 +7,16 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Middlewar
   {
     name: 'strapi::cors',
     config: {
-      origin: env.array('CORS_ORIGIN', ['http://localhost:5173']),
+      origin: (ctx) => {
+        const origin = ctx.request.header.origin;
+        if (!origin) return false;
+        if (origin.startsWith('http://localhost:') || origin.startsWith('https://localhost:'))
+          return origin;
+        if (origin.endsWith('.vercel.app') || origin === 'https://vercel.app') return origin;
+        const extra = env.array('CORS_ORIGIN', []);
+        if (extra.includes(origin)) return origin;
+        return false;
+      },
       methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'HEAD', 'OPTIONS'],
       headers: ['Content-Type', 'Authorization', 'Origin', 'Accept'],
       keepHeaderOnError: true,
