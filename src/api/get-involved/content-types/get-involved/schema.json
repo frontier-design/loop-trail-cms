@@ -1,0 +1,37 @@
+{
+  "kind": "singleType",
+  "collectionName": "get_involveds",
+  "info": {
+    "singularName": "get-involved",
+    "pluralName": "get-involveds",
+    "displayName": "Get Involved"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "required": true
+    },
+    "Hero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "IntroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "IntroParagraph": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

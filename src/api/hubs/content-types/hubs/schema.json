@@ -1,0 +1,44 @@
+{
+  "kind": "singleType",
+  "collectionName": "hubs_plural",
+  "info": {
+    "singularName": "hubs",
+    "pluralName": "hubs-plural",
+    "displayName": " Hubs and Neighbourhoods"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "required": true
+    },
+    "Hero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "IntroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "IntroParagraph": {
+      "type": "blocks",
+      "required": true
+    },
+    "HubItem": {
+      "type": "component",
+      "component": "hub-item.hub-item",
+      "repeatable": true,
+      "required": true
+    }
+  }
+}

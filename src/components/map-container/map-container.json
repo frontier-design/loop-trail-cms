@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_map_container_map_containers",
+  "info": {
+    "displayName": "Map-Container",
+    "icon": "pinMap"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Description": {
+      "type": "string",
+      "required": true
+    },
+    "MapThumbnail": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "MapDownloadLink": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": true,
+      "required": true
+    }
+  },
+  "config": {}
+}

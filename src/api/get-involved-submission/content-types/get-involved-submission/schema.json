@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "get_involved_submissions",
+  "info": {
+    "singularName": "get-involved-submission",
+    "pluralName": "get-involved-submissions",
+    "displayName": "Get Involved Submission"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstName": {
+      "type": "string",
+      "required": true
+    },
+    "lastName": {
+      "type": "string",
+      "required": true
+    },
+    "organization": {
+      "type": "string"
+    },
+    "message": {
+      "type": "text",
+      "required": true
+    },
+    "email": {
+      "type": "email",
+      "required": true
+    },
+    "submittedAt": {
+      "type": "datetime"
+    }
+  }
+}

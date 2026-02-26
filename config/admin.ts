@@ -19,6 +19,24 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Admin => 
     nps: env.bool('FLAG_NPS', true),
     promoteEE: env.bool('FLAG_PROMOTE_EE', true),
   },
+  preview: {
+    enabled: true,
+    config: {
+      allowedOrigins: [env('CLIENT_URL')],
+      async handler(uid, { documentId, locale, status }) {
+        const document = await strapi.documents(uid as any).findOne({ documentId });
+        const pathname = uid === 'api::hubs.hubs' ? '/hubs' : null;
+        if (!pathname) return null;
+
+        const params = new URLSearchParams({
+          preview: 'true',
+          secret: env('PREVIEW_SECRET'),
+          status: status ?? 'draft',
+        });
+        return `${env('CLIENT_URL')}${pathname}?${params}`;
+      },
+    },
+  },
 });
 
 export default config;

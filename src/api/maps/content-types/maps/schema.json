@@ -1,0 +1,38 @@
+{
+  "kind": "singleType",
+  "collectionName": "maps_plural",
+  "info": {
+    "singularName": "maps",
+    "pluralName": "maps-plural",
+    "displayName": "Loop Trail Maps"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "required": true
+    },
+    "Hero": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "IntroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "MapContainer": {
+      "type": "component",
+      "component": "map-container.map-container",
+      "repeatable": true
+    }
+  }
+}

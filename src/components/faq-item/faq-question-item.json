@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_faq_item_faq_question_items",
+  "info": {
+    "displayName": "FAQ-question-item",
+    "icon": "bulletList"
+  },
+  "options": {},
+  "attributes": {
+    "Question": {
+      "type": "string",
+      "required": true
+    },
+    "Answer": {
+      "type": "text",
+      "required": true
+    }
+  },
+  "config": {}
+}
