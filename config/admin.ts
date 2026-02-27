@@ -21,23 +21,24 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Admin => 
   },
   preview: {
     enabled: !!env('CLIENT_URL'),
-    config: env('CLIENT_URL')
-      ? {
-          allowedOrigins: [env('CLIENT_URL')],
-          async handler(uid, { documentId, locale, status }) {
-            const document = await strapi.documents(uid as any).findOne({ documentId });
-            const pathname = uid === 'api::hubs.hubs' ? '/hubs' : null;
-            if (!pathname) return null;
+    config: {
+      allowedOrigins: env('CLIENT_URL') ? [env('CLIENT_URL')] : [],
+      async handler(uid, { documentId, locale, status }) {
+        const clientUrl = env('CLIENT_URL');
+        if (!clientUrl) return null;
 
-            const params = new URLSearchParams({
-              preview: 'true',
-              secret: env('PREVIEW_SECRET'),
-              status: status ?? 'draft',
-            });
-            return `${env('CLIENT_URL')}${pathname}?${params}`;
-          },
-        }
-      : {},
+        const document = await strapi.documents(uid as any).findOne({ documentId });
+        const pathname = uid === 'api::hubs.hubs' ? '/hubs' : null;
+        if (!pathname) return null;
+
+        const params = new URLSearchParams({
+          preview: 'true',
+          secret: env('PREVIEW_SECRET'),
+          status: status ?? 'draft',
+        });
+        return `${clientUrl}${pathname}?${params}`;
+      },
+    },
   },
 });
 
