@@ -26,6 +26,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Middlewar
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  'global::upload',
 ];
 
 export default config;
