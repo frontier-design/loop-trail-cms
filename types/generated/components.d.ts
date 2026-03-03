@@ -93,6 +93,20 @@ export interface MapContainerMapContainer extends Struct.ComponentSchema {
   };
 }
 
+export interface StewardshipItemStewardshipItem extends Struct.ComponentSchema {
+  collectionName: 'components_stewardship_item_stewardship_items';
+  info: {
+    displayName: 'Stewardship-item';
+    icon: 'brush';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    Paragraph: Schema.Attribute.Text & Schema.Attribute.Required;
+    Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
@@ -102,6 +116,7 @@ declare module '@strapi/strapi' {
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;
+      'stewardship-item.stewardship-item': StewardshipItemStewardshipItem;
     }
   }
 }

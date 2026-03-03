@@ -558,6 +558,46 @@ export interface ApiHubsHubs extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiIndigenousStewardshipIndigenousStewardship
+  extends Struct.SingleTypeSchema {
+  collectionName: 'indigenous_stewardships';
+  info: {
+    displayName: 'Indigenous Stewardship ';
+    pluralName: 'indigenous-stewardships';
+    singularName: 'indigenous-stewardship';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    ComponentExplainer: Schema.Attribute.Component<
+      'stewardship-item.stewardship-item',
+      true
+    > &
+      Schema.Attribute.Required;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    ExplainerImage: Schema.Attribute.Media<'images' | 'files'>;
+    ExplainerText: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Headline: Schema.Attribute.String & Schema.Attribute.Required;
+    Hero: Schema.Attribute.Media<'images' | 'files' | 'videos', true> &
+      Schema.Attribute.Required;
+    IntroParagraph: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    IntroTitle: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::indigenous-stewardship.indigenous-stewardship'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiMapsMaps extends Struct.SingleTypeSchema {
   collectionName: 'maps_plural';
   info: {
@@ -1134,6 +1174,7 @@ declare module '@strapi/strapi' {
       'api::get-involved-submission.get-involved-submission': ApiGetInvolvedSubmissionGetInvolvedSubmission;
       'api::get-involved.get-involved': ApiGetInvolvedGetInvolved;
       'api::hubs.hubs': ApiHubsHubs;
+      'api::indigenous-stewardship.indigenous-stewardship': ApiIndigenousStewardshipIndigenousStewardship;
       'api::maps.maps': ApiMapsMaps;
       'api::newsletter-subscription.newsletter-subscription': ApiNewsletterSubscriptionNewsletterSubscription;
       'plugin::content-releases.release': PluginContentReleasesRelease;

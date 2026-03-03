@@ -1,0 +1,55 @@
+{
+  "kind": "singleType",
+  "collectionName": "indigenous_stewardships",
+  "info": {
+    "singularName": "indigenous-stewardship",
+    "pluralName": "indigenous-stewardships",
+    "displayName": "Indigenous Stewardship "
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Headline": {
+      "type": "string",
+      "required": true
+    },
+    "Hero": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ]
+    },
+    "IntroTitle": {
+      "type": "string",
+      "required": true
+    },
+    "IntroParagraph": {
+      "type": "blocks",
+      "required": true
+    },
+    "ExplainerText": {
+      "type": "blocks",
+      "required": true
+    },
+    "ExplainerImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    },
+    "ComponentExplainer": {
+      "type": "component",
+      "component": "stewardship-item.stewardship-item",
+      "repeatable": true,
+      "required": true
+    }
+  }
+}

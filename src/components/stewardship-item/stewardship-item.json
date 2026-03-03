@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_stewardship_item_stewardship_items",
+  "info": {
+    "displayName": "Stewardship-item",
+    "icon": "brush"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Paragraph": {
+      "type": "text",
+      "required": true
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}
