@@ -1,0 +1,25 @@
+{
+  "kind": "singleType",
+  "collectionName": "homes",
+  "info": {
+    "singularName": "home",
+    "pluralName": "homes",
+    "displayName": "Home"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "HomeIntro": {
+      "type": "component",
+      "component": "home.home-intro",
+      "repeatable": true
+    },
+    "HomeCta": {
+      "type": "component",
+      "component": "cta.cta",
+      "repeatable": true
+    }
+  }
+}

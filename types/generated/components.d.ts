@@ -46,6 +46,18 @@ export interface FaqItemFaqQuestionItem extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeHomeIntro extends Struct.ComponentSchema {
+  collectionName: 'components_home_home_intros';
+  info: {
+    displayName: 'home-intro';
+  };
+  attributes: {
+    IntroText: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    StackingImage: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+  };
+}
+
 export interface HubItemHubItem extends Struct.ComponentSchema {
   collectionName: 'components_hub_item_hub_items';
   info: {
@@ -113,6 +125,7 @@ declare module '@strapi/strapi' {
       'cta.cta': CtaCta;
       'faq-item.faq-item': FaqItemFaqItem;
       'faq-item.faq-question-item': FaqItemFaqQuestionItem;
+      'home.home-intro': HomeHomeIntro;
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;

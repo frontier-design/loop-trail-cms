@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_home_home_intros",
+  "info": {
+    "displayName": "home-intro"
+  },
+  "options": {},
+  "attributes": {
+    "IntroText": {
+      "type": "blocks",
+      "required": true
+    },
+    "StackingImage": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

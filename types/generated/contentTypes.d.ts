@@ -527,6 +527,32 @@ export interface ApiGetInvolvedGetInvolved extends Struct.SingleTypeSchema {
   };
 }
 
+export interface ApiHomeHome extends Struct.SingleTypeSchema {
+  collectionName: 'homes';
+  info: {
+    displayName: 'Home';
+    pluralName: 'homes';
+    singularName: 'home';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    HomeCta: Schema.Attribute.Component<'cta.cta', true>;
+    HomeIntro: Schema.Attribute.Component<'home.home-intro', true>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
 export interface ApiHubsHubs extends Struct.SingleTypeSchema {
   collectionName: 'hubs_plural';
   info: {
@@ -1173,6 +1199,7 @@ declare module '@strapi/strapi' {
       'api::faqs.faqs': ApiFaqsFaqs;
       'api::get-involved-submission.get-involved-submission': ApiGetInvolvedSubmissionGetInvolvedSubmission;
       'api::get-involved.get-involved': ApiGetInvolvedGetInvolved;
+      'api::home.home': ApiHomeHome;
       'api::hubs.hubs': ApiHubsHubs;
       'api::indigenous-stewardship.indigenous-stewardship': ApiIndigenousStewardshipIndigenousStewardship;
       'api::maps.maps': ApiMapsMaps;
