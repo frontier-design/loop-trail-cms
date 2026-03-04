@@ -58,6 +58,20 @@ export interface HomeHomeIntro extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeIndigenousHomepageComponent
+  extends Struct.ComponentSchema {
+  collectionName: 'components_home_indigenous_homepage_components';
+  info: {
+    displayName: 'indigenous-homepage-component';
+  };
+  attributes: {
+    Image: Schema.Attribute.Media<'images' | 'files', true> &
+      Schema.Attribute.Required;
+    Link: Schema.Attribute.Component<'link.link', false>;
+    Paragraph: Schema.Attribute.Blocks & Schema.Attribute.Required;
+  };
+}
+
 export interface HubItemHubItem extends Struct.ComponentSchema {
   collectionName: 'components_hub_item_hub_items';
   info: {
@@ -126,6 +140,7 @@ declare module '@strapi/strapi' {
       'faq-item.faq-item': FaqItemFaqItem;
       'faq-item.faq-question-item': FaqItemFaqQuestionItem;
       'home.home-intro': HomeHomeIntro;
+      'home.indigenous-homepage-component': HomeIndigenousHomepageComponent;
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;

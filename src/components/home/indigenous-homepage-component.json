@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_home_indigenous_homepage_components",
+  "info": {
+    "displayName": "indigenous-homepage-component"
+  },
+  "options": {},
+  "attributes": {
+    "Paragraph": {
+      "type": "blocks",
+      "required": true
+    },
+    "Link": {
+      "type": "component",
+      "component": "link.link",
+      "repeatable": false
+    },
+    "Image": {
+      "type": "media",
+      "multiple": true,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files"
+      ]
+    }
+  },
+  "config": {}
+}

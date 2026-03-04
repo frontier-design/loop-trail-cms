@@ -543,6 +543,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     HomeCta: Schema.Attribute.Component<'cta.cta', true>;
     HomeIntro: Schema.Attribute.Component<'home.home-intro', true>;
+    IndigenousHomepageComponent: Schema.Attribute.Component<
+      'home.indigenous-homepage-component',
+      false
+    >;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::home.home'> &
       Schema.Attribute.Private;

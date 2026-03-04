@@ -20,6 +20,11 @@
       "type": "component",
       "component": "cta.cta",
       "repeatable": true
+    },
+    "IndigenousHomepageComponent": {
+      "type": "component",
+      "component": "home.indigenous-homepage-component",
+      "repeatable": false
     }
   }
 }
