@@ -25,6 +25,11 @@
       "type": "component",
       "component": "home.indigenous-homepage-component",
       "repeatable": false
+    },
+    "Carousel": {
+      "type": "component",
+      "component": "home.carousel",
+      "repeatable": true
     }
   }
 }

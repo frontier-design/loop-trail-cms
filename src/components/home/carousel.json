@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_home_carousels",
+  "info": {
+    "displayName": "Carousel",
+    "icon": "star"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true
+    },
+    "Paragraph": {
+      "type": "blocks",
+      "required": true
+    }
+  },
+  "config": {}
+}
