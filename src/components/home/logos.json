@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_home_logos",
+  "info": {
+    "displayName": "logos",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "LogoSectionTitle": {
+      "type": "string",
+      "required": true
+    },
+    "LogoItem": {
+      "type": "component",
+      "component": "home.logo-item",
+      "repeatable": true
+    }
+  },
+  "config": {}
+}

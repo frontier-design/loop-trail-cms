@@ -30,6 +30,11 @@
       "type": "component",
       "component": "home.carousel",
       "repeatable": true
+    },
+    "Logos": {
+      "type": "component",
+      "component": "home.logos",
+      "repeatable": true
     }
   }
 }

@@ -84,6 +84,31 @@ export interface HomeIndigenousHomepageComponent
   };
 }
 
+export interface HomeLogoItem extends Struct.ComponentSchema {
+  collectionName: 'components_home_logo_items';
+  info: {
+    displayName: 'logo-item';
+    icon: 'apps';
+  };
+  attributes: {
+    LogoImage: Schema.Attribute.Media<'images' | 'files'>;
+    LogoText: Schema.Attribute.String;
+    LogoTitle: Schema.Attribute.String;
+  };
+}
+
+export interface HomeLogos extends Struct.ComponentSchema {
+  collectionName: 'components_home_logos';
+  info: {
+    displayName: 'logos';
+    icon: 'apps';
+  };
+  attributes: {
+    LogoItem: Schema.Attribute.Component<'home.logo-item', true>;
+    LogoSectionTitle: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface HubItemHubItem extends Struct.ComponentSchema {
   collectionName: 'components_hub_item_hub_items';
   info: {
@@ -154,6 +179,8 @@ declare module '@strapi/strapi' {
       'home.carousel': HomeCarousel;
       'home.home-intro': HomeHomeIntro;
       'home.indigenous-homepage-component': HomeIndigenousHomepageComponent;
+      'home.logo-item': HomeLogoItem;
+      'home.logos': HomeLogos;
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;
