@@ -39,6 +39,11 @@
       "component": "hub-item.hub-item",
       "repeatable": true,
       "required": true
+    },
+    "Neighbourhoods": {
+      "type": "component",
+      "component": "neighbourhoods.neighbourhoods",
+      "repeatable": true
     }
   }
 }

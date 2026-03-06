@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_neighbourhoods_neighbourhoods",
+  "info": {
+    "displayName": "Neighbourhoods",
+    "icon": "emotionHappy"
+  },
+  "options": {},
+  "attributes": {
+    "NeighbourhoodName": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

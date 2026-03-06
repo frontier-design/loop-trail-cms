@@ -156,6 +156,17 @@ export interface MapContainerMapContainer extends Struct.ComponentSchema {
   };
 }
 
+export interface NeighbourhoodsNeighbourhoods extends Struct.ComponentSchema {
+  collectionName: 'components_neighbourhoods_neighbourhoods';
+  info: {
+    displayName: 'Neighbourhoods';
+    icon: 'emotionHappy';
+  };
+  attributes: {
+    NeighbourhoodName: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
 export interface StewardshipItemStewardshipItem extends Struct.ComponentSchema {
   collectionName: 'components_stewardship_item_stewardship_items';
   info: {
@@ -184,6 +195,7 @@ declare module '@strapi/strapi' {
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;
+      'neighbourhoods.neighbourhoods': NeighbourhoodsNeighbourhoods;
       'stewardship-item.stewardship-item': StewardshipItemStewardshipItem;
     }
   }
