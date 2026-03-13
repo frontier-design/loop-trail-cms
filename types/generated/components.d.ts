@@ -148,11 +148,26 @@ export interface MapContainerMapContainer extends Struct.ComponentSchema {
   };
   attributes: {
     Description: Schema.Attribute.String & Schema.Attribute.Required;
-    MapDownloadLink: Schema.Attribute.Component<'link.link', true> &
-      Schema.Attribute.Required;
+    MapDownloadLink: Schema.Attribute.Component<
+      'map-container.map-download-link',
+      true
+    >;
     MapThumbnail: Schema.Attribute.Media<'images', true> &
       Schema.Attribute.Required;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
+  };
+}
+
+export interface MapContainerMapDownloadLink extends Struct.ComponentSchema {
+  collectionName: 'components_map_container_map_download_links';
+  info: {
+    displayName: 'MapDownloadLink';
+    icon: 'arrowDown';
+  };
+  attributes: {
+    LinkDisplay: Schema.Attribute.String & Schema.Attribute.Required;
+    MapFile: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -195,6 +210,7 @@ declare module '@strapi/strapi' {
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;
+      'map-container.map-download-link': MapContainerMapDownloadLink;
       'neighbourhoods.neighbourhoods': NeighbourhoodsNeighbourhoods;
       'stewardship-item.stewardship-item': StewardshipItemStewardshipItem;
     }

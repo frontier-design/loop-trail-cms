@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_map_container_map_download_links",
+  "info": {
+    "displayName": "MapDownloadLink",
+    "icon": "arrowDown"
+  },
+  "options": {},
+  "attributes": {
+    "MapFile": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "LinkDisplay": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "config": {}
+}

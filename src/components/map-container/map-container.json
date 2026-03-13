@@ -24,9 +24,8 @@
     },
     "MapDownloadLink": {
       "type": "component",
-      "component": "link.link",
-      "repeatable": true,
-      "required": true
+      "component": "map-container.map-download-link",
+      "repeatable": true
     }
   },
   "config": {}
