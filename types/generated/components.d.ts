@@ -25,12 +25,11 @@ export interface CtaCta extends Struct.ComponentSchema {
     icon: 'magic';
   };
   attributes: {
-    Background: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios',
-      true
+    Button: Schema.Attribute.Component<'link.link', true>;
+    HomeCta_Background_2400x1350_JPGorWebP_max900KB: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
-    Button: Schema.Attribute.Component<'link.link', true>;
     Subtitle: Schema.Attribute.String & Schema.Attribute.Required;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -82,9 +81,11 @@ export interface HomeHomeIntro extends Struct.ComponentSchema {
     displayName: 'home-intro';
   };
   attributes: {
-    IntroText: Schema.Attribute.Blocks & Schema.Attribute.Required;
-    StackingImage: Schema.Attribute.Media<'images' | 'files', true> &
+    HomeIntro_StackingImage_1600x1600_JPGorWebP_max700KB: Schema.Attribute.Media<
+      'images' | 'files'
+    > &
       Schema.Attribute.Required;
+    IntroText: Schema.Attribute.Blocks & Schema.Attribute.Required;
   };
 }
 
@@ -95,7 +96,9 @@ export interface HomeIndigenousHomepageComponent
     displayName: 'indigenous-homepage-component';
   };
   attributes: {
-    Image: Schema.Attribute.Media<'images' | 'files', true> &
+    IndigenousHomepageComponent_Image_1600x1600_JPGorWebP_max700KB: Schema.Attribute.Media<
+      'images' | 'files'
+    > &
       Schema.Attribute.Required;
     Link: Schema.Attribute.Component<'link.link', false>;
     Paragraph: Schema.Attribute.Blocks & Schema.Attribute.Required;
@@ -109,7 +112,9 @@ export interface HomeLogoItem extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    LogoImage: Schema.Attribute.Media<'images' | 'files'>;
+    Logos_LogoItem_LogoImage_SVG_preferred_or_PNGorWebP_min800pxwide_max400KB: Schema.Attribute.Media<
+      'images' | 'files'
+    >;
     LogoText: Schema.Attribute.String;
     LogoTitle: Schema.Attribute.String;
   };

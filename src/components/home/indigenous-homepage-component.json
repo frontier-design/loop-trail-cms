@@ -14,9 +14,9 @@
       "component": "link.link",
       "repeatable": false
     },
-    "Image": {
+    "IndigenousHomepageComponent_Image_1600x1600_JPGorWebP_max700KB": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",

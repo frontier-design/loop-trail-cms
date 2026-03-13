@@ -14,9 +14,9 @@
       "type": "string",
       "required": true
     },
-    "Background": {
+    "HomeCta_Background_2400x1350_JPGorWebP_max900KB": {
       "type": "media",
-      "multiple": true,
+      "multiple": false,
       "required": true,
       "allowedTypes": [
         "images",
