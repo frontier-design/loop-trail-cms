@@ -10,7 +10,7 @@
       "type": "string",
       "required": true
     },
-    "Answer": {
+    "Answers": {
       "type": "blocks",
       "required": true
     }
