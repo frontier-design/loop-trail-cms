@@ -13,7 +13,7 @@
       "type": "text",
       "maxLength": 150
     },
-    "MetaImage": {
+    "MetaImage_1200x630_max500kb": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [

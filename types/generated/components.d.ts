@@ -11,7 +11,9 @@ export interface BasicSharedMeta extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 150;
       }>;
-    MetaImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    MetaImage_1200x630_max500kb: Schema.Attribute.Media<
+      'images' | 'files' | 'videos' | 'audios'
+    >;
     MetaTitle: Schema.Attribute.String;
   };
 }
