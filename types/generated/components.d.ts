@@ -11,9 +11,7 @@ export interface BasicSharedMeta extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 150;
       }>;
-    MetaImage_1200x630_max500kb: Schema.Attribute.Media<
-      'images' | 'files' | 'videos' | 'audios'
-    >;
+    MetaImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
     MetaTitle: Schema.Attribute.String;
   };
 }
@@ -25,11 +23,11 @@ export interface CtaCta extends Struct.ComponentSchema {
     icon: 'magic';
   };
   attributes: {
-    Button: Schema.Attribute.Component<'link.link', true>;
-    HomeCta_Background_2400x1350_JPGorWebP_max900KB: Schema.Attribute.Media<
+    Background: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     > &
       Schema.Attribute.Required;
+    Button: Schema.Attribute.Component<'link.link', true>;
     Subtitle: Schema.Attribute.String & Schema.Attribute.Required;
     Title: Schema.Attribute.String & Schema.Attribute.Required;
   };
@@ -81,11 +79,9 @@ export interface HomeHomeIntro extends Struct.ComponentSchema {
     displayName: 'home-intro';
   };
   attributes: {
-    HomeIntro_StackingImage_1600x1600_JPGorWebP_max700KB: Schema.Attribute.Media<
-      'images' | 'files'
-    > &
-      Schema.Attribute.Required;
     IntroText: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    StackingImage: Schema.Attribute.Media<'images' | 'files'> &
+      Schema.Attribute.Required;
   };
 }
 
@@ -96,9 +92,7 @@ export interface HomeIndigenousHomepageComponent
     displayName: 'indigenous-homepage-component';
   };
   attributes: {
-    IndigenousHomepageComponent_Image_1600x1600_JPGorWebP_max700KB: Schema.Attribute.Media<
-      'images' | 'files'
-    > &
+    Image: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required;
     Link: Schema.Attribute.Component<'link.link', false>;
     Paragraph: Schema.Attribute.Blocks & Schema.Attribute.Required;
@@ -112,9 +106,7 @@ export interface HomeLogoItem extends Struct.ComponentSchema {
     icon: 'apps';
   };
   attributes: {
-    Logos_LogoItem_LogoImage_SVG_preferred_or_PNGorWebP_min800pxwide_max400KB: Schema.Attribute.Media<
-      'images' | 'files'
-    >;
+    LogoImage: Schema.Attribute.Media<'images' | 'files'>;
     LogoText: Schema.Attribute.String;
     LogoTitle: Schema.Attribute.String;
   };

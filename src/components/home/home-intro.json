@@ -9,7 +9,7 @@
       "type": "blocks",
       "required": true
     },
-    "HomeIntro_StackingImage_1600x1600_JPGorWebP_max700KB": {
+    "StackingImage": {
       "type": "media",
       "multiple": false,
       "required": true,

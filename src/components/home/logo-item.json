@@ -6,7 +6,7 @@
   },
   "options": {},
   "attributes": {
-    "Logos_LogoItem_LogoImage_SVG_preferred_or_PNGorWebP_min800pxwide_max400KB": {
+    "LogoImage": {
       "type": "media",
       "multiple": false,
       "allowedTypes": [
