@@ -26,7 +26,7 @@
       "component": "cta.cta",
       "repeatable": false
     },
-    "Carousel": {
+    "WaysTheLoopWillTransformToronto": {
       "type": "component",
       "component": "home.carousel",
       "repeatable": true
