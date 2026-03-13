@@ -147,7 +147,7 @@ export interface MapContainerMapContainer extends Struct.ComponentSchema {
     icon: 'pinMap';
   };
   attributes: {
-    Description: Schema.Attribute.String & Schema.Attribute.Required;
+    Description: Schema.Attribute.Text & Schema.Attribute.Required;
     MapDownloadLink: Schema.Attribute.Component<
       'map-container.map-download-link',
       true

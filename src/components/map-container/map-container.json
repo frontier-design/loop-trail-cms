@@ -11,7 +11,7 @@
       "required": true
     },
     "Description": {
-      "type": "string",
+      "type": "text",
       "required": true
     },
     "MapThumbnail": {
