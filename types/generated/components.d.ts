@@ -1,5 +1,21 @@
 import type { Schema, Struct } from '@strapi/strapi';
 
+export interface BasicSharedMeta extends Struct.ComponentSchema {
+  collectionName: 'components_basic_shared_metas';
+  info: {
+    displayName: 'shared.meta';
+    icon: 'alien';
+  };
+  attributes: {
+    MetaDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 150;
+      }>;
+    MetaImage: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    MetaTitle: Schema.Attribute.String;
+  };
+}
+
 export interface CtaCta extends Struct.ComponentSchema {
   collectionName: 'components_cta_ctas';
   info: {
@@ -199,6 +215,7 @@ export interface StewardshipItemStewardshipItem extends Struct.ComponentSchema {
 declare module '@strapi/strapi' {
   export module Public {
     export interface ComponentSchemas {
+      'basic.shared-meta': BasicSharedMeta;
       'cta.cta': CtaCta;
       'faq-item.faq-item': FaqItemFaqItem;
       'faq-item.faq-question-item': FaqItemFaqQuestionItem;

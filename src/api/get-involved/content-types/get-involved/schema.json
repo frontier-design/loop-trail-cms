@@ -32,6 +32,11 @@
     "IntroParagraph": {
       "type": "text",
       "required": true
+    },
+    "SharedMeta": {
+      "type": "component",
+      "component": "basic.shared-meta",
+      "repeatable": false
     }
   }
 }

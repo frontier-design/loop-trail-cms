@@ -33,6 +33,11 @@
       "type": "component",
       "component": "map-container.map-container",
       "repeatable": true
+    },
+    "SharedMeta": {
+      "type": "component",
+      "component": "basic.shared-meta",
+      "repeatable": false
     }
   }
 }

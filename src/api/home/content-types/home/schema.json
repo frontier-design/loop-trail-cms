@@ -35,6 +35,11 @@
       "type": "component",
       "component": "home.logos",
       "repeatable": true
+    },
+    "SharedMeta": {
+      "type": "component",
+      "component": "basic.shared-meta",
+      "repeatable": true
     }
   }
 }

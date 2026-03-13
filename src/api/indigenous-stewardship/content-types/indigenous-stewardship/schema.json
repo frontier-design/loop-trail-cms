@@ -50,6 +50,11 @@
       "component": "stewardship-item.stewardship-item",
       "repeatable": true,
       "required": true
+    },
+    "SharedMeta": {
+      "type": "component",
+      "component": "basic.shared-meta",
+      "repeatable": false
     }
   }
 }

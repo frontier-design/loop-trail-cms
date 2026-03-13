@@ -455,6 +455,7 @@ export interface ApiFaqsFaqs extends Struct.SingleTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::faqs.faqs'> &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SharedMeta: Schema.Attribute.Component<'basic.shared-meta', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -521,6 +522,7 @@ export interface ApiGetInvolvedGetInvolved extends Struct.SingleTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SharedMeta: Schema.Attribute.Component<'basic.shared-meta', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -552,6 +554,7 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
       Schema.Attribute.Private;
     Logos: Schema.Attribute.Component<'home.logos', true>;
     publishedAt: Schema.Attribute.DateTime;
+    SharedMeta: Schema.Attribute.Component<'basic.shared-meta', true>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -591,6 +594,7 @@ export interface ApiHubsHubs extends Struct.SingleTypeSchema {
       true
     >;
     publishedAt: Schema.Attribute.DateTime;
+    SharedMeta: Schema.Attribute.Component<'basic.shared-meta', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -631,6 +635,7 @@ export interface ApiIndigenousStewardshipIndigenousStewardship
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
+    SharedMeta: Schema.Attribute.Component<'basic.shared-meta', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -663,6 +668,7 @@ export interface ApiMapsMaps extends Struct.SingleTypeSchema {
       true
     >;
     publishedAt: Schema.Attribute.DateTime;
+    SharedMeta: Schema.Attribute.Component<'basic.shared-meta', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

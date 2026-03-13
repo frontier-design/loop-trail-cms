@@ -44,6 +44,11 @@
       "type": "component",
       "component": "neighbourhoods.neighbourhoods",
       "repeatable": true
+    },
+    "SharedMeta": {
+      "type": "component",
+      "component": "basic.shared-meta",
+      "repeatable": false
     }
   }
 }

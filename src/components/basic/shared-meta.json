@@ -1,0 +1,28 @@
+{
+  "collectionName": "components_basic_shared_metas",
+  "info": {
+    "displayName": "shared.meta",
+    "icon": "alien"
+  },
+  "options": {},
+  "attributes": {
+    "MetaTitle": {
+      "type": "string"
+    },
+    "MetaDescription": {
+      "type": "text",
+      "maxLength": 150
+    },
+    "MetaImage": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  },
+  "config": {}
+}
