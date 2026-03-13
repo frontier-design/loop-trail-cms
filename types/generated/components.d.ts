@@ -41,7 +41,7 @@ export interface FaqItemFaqQuestionItem extends Struct.ComponentSchema {
     icon: 'bulletList';
   };
   attributes: {
-    Answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    Answer: Schema.Attribute.Blocks & Schema.Attribute.Required;
     Question: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }

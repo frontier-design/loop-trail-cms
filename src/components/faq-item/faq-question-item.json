@@ -11,7 +11,7 @@
       "required": true
     },
     "Answer": {
-      "type": "text",
+      "type": "blocks",
       "required": true
     }
   },

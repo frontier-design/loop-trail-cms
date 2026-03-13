@@ -542,8 +542,8 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    HomeCta: Schema.Attribute.Component<'cta.cta', true>;
-    HomeIntro: Schema.Attribute.Component<'home.home-intro', true>;
+    HomeCta: Schema.Attribute.Component<'cta.cta', false>;
+    HomeIntro: Schema.Attribute.Component<'home.home-intro', false>;
     IndigenousHomepageComponent: Schema.Attribute.Component<
       'home.indigenous-homepage-component',
       false

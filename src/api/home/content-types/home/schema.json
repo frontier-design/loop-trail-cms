@@ -14,16 +14,16 @@
     "HomeIntro": {
       "type": "component",
       "component": "home.home-intro",
-      "repeatable": true
-    },
-    "HomeCta": {
-      "type": "component",
-      "component": "cta.cta",
-      "repeatable": true
+      "repeatable": false
     },
     "IndigenousHomepageComponent": {
       "type": "component",
       "component": "home.indigenous-homepage-component",
+      "repeatable": false
+    },
+    "HomeCta": {
+      "type": "component",
+      "component": "cta.cta",
       "repeatable": false
     },
     "Carousel": {
