@@ -39,7 +39,7 @@
     "SharedMeta": {
       "type": "component",
       "component": "basic.shared-meta",
-      "repeatable": true
+      "repeatable": false
     }
   }
 }
