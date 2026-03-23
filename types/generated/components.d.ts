@@ -107,6 +107,7 @@ export interface HomeLogoItem extends Struct.ComponentSchema {
   };
   attributes: {
     LogoImage: Schema.Attribute.Media<'images' | 'files'>;
+    LogoLink: Schema.Attribute.String;
     LogoText: Schema.Attribute.String;
     LogoTitle: Schema.Attribute.String;
   };

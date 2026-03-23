@@ -19,6 +19,9 @@
     },
     "LogoText": {
       "type": "string"
+    },
+    "LogoLink": {
+      "type": "string"
     }
   },
   "config": {}
