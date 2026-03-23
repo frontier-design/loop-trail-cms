@@ -135,6 +135,7 @@ export interface HomeStatusDescription extends Struct.ComponentSchema {
       Schema.Attribute.SetMinMaxLength<{
         maxLength: 150;
       }>;
+    StatusTitle: Schema.Attribute.String;
   };
 }
 

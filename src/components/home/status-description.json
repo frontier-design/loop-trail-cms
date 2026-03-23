@@ -5,6 +5,9 @@
   },
   "options": {},
   "attributes": {
+    "StatusTitle": {
+      "type": "string"
+    },
     "StatusDescription": {
       "type": "text",
       "maxLength": 150
