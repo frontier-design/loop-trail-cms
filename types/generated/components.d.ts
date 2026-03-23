@@ -125,6 +125,19 @@ export interface HomeLogos extends Struct.ComponentSchema {
   };
 }
 
+export interface HomeStatusDescription extends Struct.ComponentSchema {
+  collectionName: 'components_home_status_descriptions';
+  info: {
+    displayName: 'StatusDescription';
+  };
+  attributes: {
+    StatusDescription: Schema.Attribute.Text &
+      Schema.Attribute.SetMinMaxLength<{
+        maxLength: 150;
+      }>;
+  };
+}
+
 export interface HubItemHubItem extends Struct.ComponentSchema {
   collectionName: 'components_hub_item_hub_items';
   info: {
@@ -224,6 +237,7 @@ declare module '@strapi/strapi' {
       'home.indigenous-homepage-component': HomeIndigenousHomepageComponent;
       'home.logo-item': HomeLogoItem;
       'home.logos': HomeLogos;
+      'home.status-description': HomeStatusDescription;
       'hub-item.hub-item': HubItemHubItem;
       'link.link': LinkLink;
       'map-container.map-container': MapContainerMapContainer;

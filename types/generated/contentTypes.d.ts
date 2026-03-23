@@ -555,6 +555,10 @@ export interface ApiHomeHome extends Struct.SingleTypeSchema {
     Logos: Schema.Attribute.Component<'home.logos', true>;
     publishedAt: Schema.Attribute.DateTime;
     SharedMeta: Schema.Attribute.Component<'basic.shared-meta', false>;
+    StatusDescription: Schema.Attribute.Component<
+      'home.status-description',
+      true
+    >;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

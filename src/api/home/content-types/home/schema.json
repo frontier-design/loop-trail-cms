@@ -40,6 +40,11 @@
       "type": "component",
       "component": "basic.shared-meta",
       "repeatable": false
+    },
+    "StatusDescription": {
+      "type": "component",
+      "component": "home.status-description",
+      "repeatable": true
     }
   }
 }
