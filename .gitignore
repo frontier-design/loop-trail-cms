@@ -137,3 +137,10 @@ build
 migrate.mjs
 migration-data/
 media-output/
+
+############################
+# Credentials
+############################
+
+data/
+data/loop-google-analytics.json
