@@ -10,7 +10,6 @@ Icon
 .Trashes
 ._*
 .cursor
-.claude
 
 
 ############################
@@ -127,7 +126,6 @@ coverage
 license.txt
 exports
 .strapi
-dist
 build
 .strapi-updater.json
 .strapi-cloud.json

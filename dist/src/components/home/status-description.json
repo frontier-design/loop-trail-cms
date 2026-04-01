@@ -1,0 +1,17 @@
+{
+    "collectionName": "components_home_status_descriptions",
+    "info": {
+        "displayName": "StatusDescription"
+    },
+    "options": {},
+    "attributes": {
+        "StatusTitle": {
+            "type": "string"
+        },
+        "StatusDescription": {
+            "type": "text",
+            "maxLength": 150
+        }
+    },
+    "config": {}
+}
