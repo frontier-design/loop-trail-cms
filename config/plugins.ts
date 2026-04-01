@@ -25,9 +25,6 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Plugin =>
   }
 
   return {
-    'strapi-google-analytics-dashboard': {
-      enabled: false,
-    },
     email: {
       config: {
         provider: 'nodemailer',

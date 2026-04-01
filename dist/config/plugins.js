@@ -21,9 +21,6 @@ const config = ({ env }) => {
         };
     }
     return {
-        'strapi-google-analytics-dashboard': {
-            enabled: false,
-        },
         email: {
             config: {
                 provider: 'nodemailer',
