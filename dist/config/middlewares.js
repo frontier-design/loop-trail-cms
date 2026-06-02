@@ -36,6 +36,7 @@ const config = ({ env }) => [
     'strapi::session',
     'strapi::favicon',
     'strapi::public',
+    'global::cache-headers',
     'global::upload',
 ];
 exports.default = config;

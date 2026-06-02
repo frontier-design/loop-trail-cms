@@ -3,8 +3,10 @@ import type { Core } from '@strapi/strapi';
 /** Always allowed so local Vite (5173) can call Strapi when CORS_ORIGIN lists only production hosts. */
 const defaultLocalDevOrigins = [
   'http://localhost:5173',
+  'http://localhost:5174',
   'http://localhost:3000',
   'http://127.0.0.1:5173',
+  'http://127.0.0.1:5174',
   'http://127.0.0.1:3000',
 ];
 
@@ -37,6 +39,7 @@ const config = ({ env }: Core.Config.Shared.ConfigParams): Core.Config.Middlewar
   'strapi::session',
   'strapi::favicon',
   'strapi::public',
+  'global::cache-headers',
   'global::upload',
 ];
 
